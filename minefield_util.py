@@ -144,9 +144,9 @@ def gen_flag_field(M, TP, FP, FN ):
     None.
 
     """
-    pf_m =  TP / (TP+FN)  
+    pf_m =  TP / (TP+FN)  # Recall
     C = int(np.prod(M.shape)) # number of cells in the grid
-    pf_nm =  FP/(C-(len(M.nonzero()[0])))
+    pf_nm =  FP/(C-(len(M.nonzero()[0]))) # len(M.nonzero()[0] is the number of cells that have a mine (TP+FN)
     
     Z = np.random.rand(*M.shape) # random array same size as the grid
     # We put a flag with probability pf_m if the cell has a mine
@@ -178,7 +178,7 @@ def try_gen_flagfield(M, TP_rate = 0.6, FP_rate = 0.1, FN_rate = 0.1):
     # therefore, TN_rate is 1-(TP_rate+FP_rate+FN_rate) = 1 - (0.6+0.1+0.1)
 
     C = int(np.prod(M.shape)) # number of cells in the grid
-    TP, FP, FN = TP_rate*C, FP_rate*C, FN_rate*C 
+    TP, FP, FN = TP_rate*C, FP_rate*C, FN_rate*C # This is where we calculate TP, FP & FN for the generated flag field
     F = gen_flag_field(M, TP, FP, FN)
     
     # print("\nFlag field")
