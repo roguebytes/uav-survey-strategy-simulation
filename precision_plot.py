@@ -4,52 +4,57 @@ import numpy as np
 
 from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield, get_tour, compute_tour_cost, plot_TSP
 
-def calculate_rate(TP, FP, FN, TN):
-    # TP rate = TP / (TP + FN)
-    # FP rate = FP / (FP + TN)
-    # FN rate = FN / (FN + TP)
-
-    tp_rate = TP / (TP + FN)
-    fp_rate = FP / (FP + TN)
-    fn_rate = FN / (FN + TP)
-
-    return round(tp_rate, 2), round(fp_rate, 2), round(fn_rate, 2)
-
 def run_simulation(rows, cols, low_density, high_density):
+    '''
+
+
+    :param rows:
+    :param cols:
+    :param low_density:
+    :param high_density:
+    :return:
+    '''
     R = 0.98    # Target Recall
     discount = .98
     p_1m = .9 # Precision at 1m established with actual drone camera and YOLOv9
-    p_4m = .61 # Precision at 4m established with actual drone camera and YOLOv9
+    #p_4m = .61 # Precision at 4m established with actual drone camera and YOLOv9
     P_range = [p_1m * discount ** k for k in range(20)]
-
-    for density in np.linspace(low_density, high_density, 20):
-        for p in P_range:
+    n_density = 20
+    n_experiment = 30
+    result_array = np.zeros((len(P_range), n_density, n_experiment), dtype=np.float32)
+    for i_density, density in enumerate(np.linspace(low_density, high_density, n_density)):
+        for i_p, p in enumerate(P_range):
             print(f"Running simulation with density {str(density)}")
             # Nested loop to compute average and standard deviation
-            M = try_gen_minefield(r=int(rows), c=int(cols), d=float(density))
-            print("\nMine field generated")
-            # print(M)
+            for k in range(n_experiment):
+                M = try_gen_minefield(r=int(rows), c=int(cols), d=float(density))
+                print("\nMine field generated")
+                # print(M)
 
-            # Compute TP, FP and FN
-            P = p_1m * discount
-            TP = R * len(M.nonzero()[0])
-            FP = TP * (1/P - 1)
-            FN = TP * (1/R - 1)
-            F = gen_flag_field(M, TP, FP, FN)
+                # Compute TP, FP and FN
+                P = p_1m * discount
+                TP = R * len(M.nonzero()[0])
+                FP = TP * (1/P - 1)
+                FN = TP * (1/R - 1)
+                F = gen_flag_field(M, TP, FP, FN)
 
-            print("\nFlag field generated")
-            # print(F)
+                print("\nFlag field generated")
+                # print(F)
 
-            tsp_path, G = get_tour(F, cell_side=1)
-            print("Shortest TSP Path:", tsp_path)
+                tsp_path, G = get_tour(F, cell_side=1)
+                print("Shortest TSP Path:", tsp_path)
 
-            # Compute and print the tour cost
-            tour_cost = compute_tour_cost(G, tsp_path)
-            print("Cost of the TSP Tour:", tour_cost)
+                # Compute and print the tour cost
+                tour_cost = compute_tour_cost(G, tsp_path)
+                print("Cost of the TSP Tour:", tour_cost)
 
+                result_array[i_p, i_density, k] = tour_cost
             #dens += dens_increment
 
             # plot_TSP(tsp_path, G)
+
+    mean_array = np.mean(result_array, axis=2)      # result_array is 3D, mean_array is 2D
+    std_array = np.std(result_array, axis=2)        # result_array is 3D, std_array is 2D
 
 # def run_simulation():
 #     discount = .98
