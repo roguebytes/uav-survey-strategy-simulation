@@ -7,6 +7,21 @@ import timeit
 import time
 import NumpyEncoder
 
+"""
+Last updated Friday 8th Nov
+
+@author: Frank
+f.loewenich@hdr.qut.edu.au
+
+Key variables
+simulation_log : array that logs individual experiment results as json
+density_increment_log : array that logs density increment results as json
+R : target RECALL
+discount : reduction parameter applied to P_range
+
+
+"""
+
 from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield, get_tour, compute_tour_cost, plot_TSP
 
 def run_simulation(rows, cols, low_density, high_density):

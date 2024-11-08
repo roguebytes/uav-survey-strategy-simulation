@@ -5,18 +5,20 @@ import numpy as np
 from ultralytics import YOLO
 import argparse
 
+# Experiment note:
 # Using set 2 for 1m and set 3 for 5m images
 
 # Define the parser
 parser = argparse.ArgumentParser(description='object detection script')
-# Declare an argument (`--xxxx`), saying that the 
-# corresponding value should be stored in the `xxxx` 
-# field, and using a default value if the argument 
-# isn't given
+# Declare the arguments
+# --altitude defines the altitude folder; Image folders use the naming convention '../{altitude}m/'
+# --index defines the image index in the altitude folder. Images should follow the naming
+#   convention 'dji_{altitude}m_{index}.JPG'.
 parser.add_argument('--altitude', action="store", dest='altitude', default=1)
 parser.add_argument('--index', action="store", dest='index', default=1)
+parser.add_argument('--confidence', action="store", dest='confidence', default=0.5
 
-# Now, parse the command line arguments and store the 
+# Parse the command line arguments and store them
 # values in the `args` variable
 args = parser.parse_args()
 
@@ -24,10 +26,11 @@ args = parser.parse_args()
 # print args.xxxx
 file_index = str(args.index)
 altitude = str(args.altitude)
+threshold = str(args.confidence)
 
 # Load the YOLOv9 model (can be replaced this with a custom model if trained)
 model = YOLO('C:/Users/f_loe/Projects/Yolo/yolov9-gpu/yolov9c.pt')  # Path to YOLOv9 model weights
-# model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov9c.pt', source='local')
+# model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov9c.pt', source='local') # this command works on YOLOv8
 
 ########### USE ONLY FOR YOLOV8 ##################
 # # Load the image - 
@@ -39,8 +42,9 @@ model = YOLO('C:/Users/f_loe/Projects/Yolo/yolov9-gpu/yolov9c.pt')  # Path to YO
 ########### USE ONLY FOR YOLOV8 ##################
 
 ############ YOLOV9 ############
-# Run inference with a confidence threshold of 0.01
-results = model(f'C:/Users/f_loe/Projects/Yolo/yolov9-gpu/data/images/DJI/set_3/{altitude}m/dji_{altitude}m_{file_index}.JPG', conf=0.005) # Replace with your image file path
+# Run inference with a confidence threshold of 0.05
+results = model(f'C:/Users/f_loe/Projects/Yolo/yolov9-gpu/data/images/DJI/set_3/{altitude}m/dji_{altitude}m_{file_index}.JPG', conf={
+    threshold})
 ############ YOLOV9 ############
 
 # result_img = results[0].
