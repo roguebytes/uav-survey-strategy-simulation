@@ -42,28 +42,33 @@ def run_simulation(rows, cols, low_density, high_density):
     n_density = 3  # 20
     n_experiment = 1  # 30
     P_range = [p_1m * discount ** k for k in range(3)] # original 20
+    D_range = list(enumerate(np.linspace(low_density, high_density, n_density)))
 
     result_array = np.zeros((len(P_range), n_density, n_experiment), dtype=np.float32)
     for i_density, density in enumerate(np.linspace(low_density, high_density, n_density)):
+        # DENSITY iteration
         density_increment_start_time = time.time()
         density_increment_log = {}
         density_increment_log['density'] = density
         for i_p, p in enumerate(P_range):
+            # PRECISION iteration
             simulation_start_time = time.time()
             # Nested loop to compute average and standard deviation
             for k in range(n_experiment):
+                # EXPERIMENT iteration
                 experiment_start_time = time.time()
                 print("\n-----------------------------------------\n")
-                print(f"Running density increment number {str(i_density + 1)} of {str(n_density)}")
-                print(f"Running simulation number {i_p + 1} of {str(len(P_range))}")
-                print(f"Running simulation with density {str(density)}")
+                print(f"Running density increment number {str(i_density + 1)} of {str(n_density)}.")
+                print(f"Running simulation number {i_p + 1} of {str(len(P_range))}.")
+                print(f"Running simulation with density {str(density)}.")
+                print(f"Running simulation with precision (P) of {p}.")
                 print(f"Running experiment number {str(k + 1)} of {str(n_experiment)}.")
                 M = try_gen_minefield(r=int(rows), c=int(cols), d=float(density))
                 print("Mine field generated")
                 # print(M)
 
                 # Compute TP, FP and FN
-                P = p_1m * discount
+                P = p # p_1m * discount
                 TP = R * len(M.nonzero()[0])
                 FP = TP * (1/P - 1)
                 FN = TP * (1/R - 1)
