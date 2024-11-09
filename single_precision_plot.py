@@ -18,6 +18,9 @@ f.loewenich@hdr.qut.edu.au
 from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield, get_tour, compute_tour_cost, plot_TSP
 
 def run_simulation():
+    ### Logging ###
+    experiment_start_time = time.time()
+    ###############
 
     # Simulation attributes
     i_density = 0 # index into density array
@@ -64,14 +67,31 @@ def run_simulation():
     print("Flag field generated")
     # print(F)
 
+    ### Logging ###
+    tsp_start_time = time.time()
+    ###############
+
     # Generate TSP path to visit flagged locations
     tsp_path, G = get_tour(F, cell_side=1)
     print("Shortest TSP Path:", tsp_path)
     # plot_TSP(tsp_path, G)
 
+    ### Logging ###
+    tsp_end_time = time.time()
+    tsp_exec_time = tsp_end_time - tsp_start_time
+    print(f"TSP exec time: {round(tsp_exec_time, 2)} seconds")
+    ###############
+
     # Compute and print the tour cost
     tour_cost = compute_tour_cost(G, tsp_path)
     print("Cost of the TSP Tour:", tour_cost)
+
+    ### Logging ###
+    experiment_end_time = time.time()
+    experiment_exec_time = experiment_end_time - experiment_start_time
+    print(f"Experiment exec time: {round(experiment_exec_time, 2)} seconds")
+    ###############
+
 
 
 if __name__ == "__main__":
