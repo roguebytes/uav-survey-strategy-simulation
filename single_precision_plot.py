@@ -19,12 +19,9 @@ f.loewenich@hdr.qut.edu.au
 from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield, get_tour, compute_tour_cost, plot_TSP
 
 def run_simulation():
-    ### Logging ###
-    experiment_start_time = time.time()
-    ###############
 
     # Simulation attributes
-    i_density = 1 # index into density array
+    i_density = 0 # index into density array
     i_precision = 0 # index into precision array
     c_experiment = 0 # iteration count of the experiment-loop
     n_density = 20 # number of values to generate for the P_density array
@@ -55,6 +52,9 @@ def run_simulation():
     print(f"Density: {density}")
     result_array = []
     for k in range(n_experiment):
+        ### Logging ###
+        experiment_start_time = time.time()
+        ###############
         c_experiment += 1
         # Generate a minefield
         M = try_gen_minefield(r=int(rows), c=int(cols), d=float(density))
@@ -104,7 +104,7 @@ def run_simulation():
         experiment_log['cost'] = round(tour_cost, 2)
         experiment_log['tsp_exec_time'] = round(tsp_exec_time, 2)
 
-        e_file_path = "experiment_log.json"
+        e_file_path = "logs/experiment_log.json"
         json.dump(experiment_log, open(e_file_path, "a"), indent=4)
 
         if c_experiment == n_experiment-1:
@@ -115,7 +115,7 @@ def run_simulation():
             # pd_log['result_list'] = result_array
             pd_log['mean_cost'] = statistics.mean(result_array)
 
-            p_file_path = "precision_density_log.json"
+            p_file_path = "logs/precision_density_log.json"
             json.dump(pd_log, open(p_file_path, "a"), indent=4)
         ###############
 
