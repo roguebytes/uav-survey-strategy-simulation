@@ -4,3 +4,5 @@
 /simulation_log.json
 /experiment_log.json
 /precision_density_log.json
+/logs/experiment_log.json
+/logs/precision_density_log.json
