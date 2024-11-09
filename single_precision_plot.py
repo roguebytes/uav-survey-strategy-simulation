@@ -24,33 +24,42 @@ discount : reduction parameter applied to P_range
 
 from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield, get_tour, compute_tour_cost, plot_TSP
 
-def run_simulation(rows, cols, low_density, high_density):
-    '''
-    :param rows:
-    :param cols:
-    :param low_density:
-    :param high_density:
-    :return:
-    '''
-    simulation_log = []
-    R = 0.98    # Target Recall
-    discount = .98
-    p_1m = .9 # Precision at 1m established with actual drone camera and YOLOv9
-    #p_4m = .61 # Precision at 4m established with actual drone camera and YOLOv9
-    n_density = 3  # 20
-    n_experiment = 1  # 30
-    P_range = [p_1m * discount ** k for k in range(3)] # original 20
-    D_range = list(np.linspace(low_density, high_density, n_density))
-    # result_array = np.zeros((len(P_range), n_density, n_experiment), dtype=np.float32)
+def run_simulation():
 
-    density = D_range[1]
+    # Initialize simulation parameters
+    i_density = 0 # index into density array
+    i_precision = 0 # index into precision array
+    # Minefield attributes
+    rows = 30
+    cols = 30
+    low_density = .01
+    high_density = .9
+    simulation_log = []
+    # Object Detector
+    R = 0.98    # Target Recall
+
+    # Generate a range of precision values
+    #   starting from p_1m and
+    #   every subsequent value reduced by 'discount'
+    # In this script values for PRECISION and DENSITY are MANUALLY selected for each experiment
+    p_1m = .9  # Precision at 1m established with actual drone camera and YOLOv9
+    # p_4m = .61 # Precision at 4m established with actual drone camera and YOLOv9
+    discount = .98
+    P_range = [p_1m * discount ** k for k in range(3)] # original 20
+    # Generate a range of densities between the low and high values
+    n_density = 3  # 20
+    D_range = list(np.linspace(low_density, high_density, n_density))
+
+    # Set the density
+    density = D_range[i_density] # MANUALLY select the density value
     print(f"Density: {density}")
+    # Generate a minefield
     M = try_gen_minefield(r=int(rows), c=int(cols), d=float(density))
     print("Mine field generated")
     # print(M)
 
     # Compute TP, FP and FN
-    P = P_range[1]  # p # p_1m * discount
+    P = P_range[i_precision]  # MANUALLY select the precision value
     print(f"Precision: {P}")
     TP = R * len(M.nonzero()[0])
     FP = TP * (1 / P - 1)
@@ -73,14 +82,4 @@ def run_simulation(rows, cols, low_density, high_density):
 
 
 if __name__ == "__main__":
-    # Define the command-line parser
-    parser = argparse.ArgumentParser(description='Single-Experiment Relative Precision Plot')
-    parser.add_argument('--rows', action="store", dest='rows', default=1)
-    parser.add_argument('--cols', action="store", dest='cols', default=1)
-    parser.add_argument('--lowdens', action="store", dest='lowdens', default=1)
-    parser.add_argument('--highdens', action="store", dest='highdens', default=1)
-
-    # Parse and store command-line arguments
-    args = parser.parse_args()
-
-    run_simulation(int(args.rows), int(args.cols), float(args.lowdens), float(args.highdens))
+    run_simulation()
