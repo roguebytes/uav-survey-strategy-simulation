@@ -22,10 +22,11 @@ def run_simulation():
     # Simulation attributes
     i_density = 0 # index into density array
     i_precision = 0 # index into precision array
-    n_density = 3 # number of values to generate for the P_density array
-    n_precision = 3 # number of values to generate for the P_range array
+    n_density = 20 # number of values to generate for the P_density array
+    n_precision = 20 # number of values to generate for the P_range array
     p_1m = .9  # Precision at 1m established with actual drone camera and YOLOv9
     discount = .98 # Used to reduce precision when generating a range
+    R = 0.98  # Target Recall
 
     # Minefield attributes
     rows = 30
@@ -33,16 +34,15 @@ def run_simulation():
     low_density = .01
     high_density = .9
 
-    # Detector attributes
-    R = 0.98    # Target Recall
-
     # Note: In this script values for PRECISION and DENSITY are MANUALLY selected for each experiment
     # Generate a range of precision values
     #   starting from p_1m and
     #   every subsequent value reduced by 'discount'
-    P_range = [p_1m * discount ** k for k in range(n_precision)] # original 20
+    P_range = [p_1m * discount ** k for k in range(n_precision)]
+    print(f"Precision range: {P_range}")
     # Generate a range of densities between the low and high values
     D_range = list(np.linspace(low_density, high_density, n_density))
+    print(f"Density range: {D_range}")
 
     # Set the density
     density = D_range[i_density] # MANUALLY select the density value
