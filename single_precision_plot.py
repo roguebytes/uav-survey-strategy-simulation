@@ -4,7 +4,7 @@ import time
 import statistics
 
 """
-Last updated Saturday 9th Nov
+Last updated Monday 11th Nov
 
 @author: Frank
 f.loewenich@hdr.qut.edu.au
