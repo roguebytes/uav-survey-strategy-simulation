@@ -84,14 +84,22 @@ def run_simulation():
 
     # Compute and print the tour cost
     tour_cost = compute_tour_cost(G, tsp_path)
-    print("Cost of the TSP Tour:", tour_cost)
+    print("Cost of the TSP Tour:", round(tour_cost, 2))
 
     ### Logging ###
     experiment_end_time = time.time()
     experiment_exec_time = experiment_end_time - experiment_start_time
     print(f"Experiment exec time: {round(experiment_exec_time, 2)} seconds")
-    ###############
 
+    experiment_log = {}
+    experiment_log['density'] = density
+    experiment_log['precision'] = P
+    experiment_log['cost'] = round(tour_cost, 2)
+    experiment_log['tsp_exec_time'] = round(tsp_exec_time, 2)
+
+    file_path = "experiment_log.json"
+    json.dump(experiment_log, open(file_path, "a"), indent=4)
+    ###############
 
 
 if __name__ == "__main__":
