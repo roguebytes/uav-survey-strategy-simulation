@@ -98,24 +98,28 @@ def run_simulation():
         print(f"Experiment exec time: {round(experiment_exec_time, 2)} seconds")
 
         experiment_log = {}
+        experiment_log['i_density'] = i_density
+        experiment_log['i_precision'] = i_precision
         experiment_log['count'] = c_experiment
         experiment_log['density'] = density
         experiment_log['precision'] = P
         experiment_log['cost'] = round(tour_cost, 2)
         experiment_log['tsp_exec_time'] = round(tsp_exec_time, 2)
 
-        e_file_path = "logs/experiment_log.json"
+        e_file_path = f"logs/d{i_density}_p{i_precision}_experiment_log.json"
         json.dump(experiment_log, open(e_file_path, "a"), indent=4)
 
         if c_experiment == n_experiment-1:
             pd_log = {}
+            pd_log['i_density'] = i_density
+            pd_log['i_precision'] = i_precision
             pd_log['density'] = density
             pd_log['precision'] = P
             pd_log['experiments'] = n_experiment
             # pd_log['result_list'] = result_array
             pd_log['mean_cost'] = statistics.mean(result_array)
 
-            p_file_path = "logs/precision_density_log.json"
+            p_file_path = f"logs/d{i_density}_precision_density_log.json"
             json.dump(pd_log, open(p_file_path, "a"), indent=4)
         ###############
 
