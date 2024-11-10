@@ -1,11 +1,6 @@
-import argparse
-from timeit import timeit
-from xml.sax import parse
 import numpy as np
-import codecs, json
-import timeit
+import json
 import time
-import NumpyEncoder
 import statistics
 
 """
