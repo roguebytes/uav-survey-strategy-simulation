@@ -1,0 +1,36 @@
+{
+    "i_density": 9,
+    "i_precision": 0,
+    "density": 0.43157894736842106,
+    "precision": 0.9,
+    "experiments": 30,
+    "mean_cost": 572.1934135801641
+}{
+    "i_density": 9,
+    "i_precision": 1,
+    "density": 0.43157894736842106,
+    "precision": 0.882,
+    "experiments": 30,
+    "mean_cost": 586.9736209910203
+}{
+    "i_density": 9,
+    "i_precision": 2,
+    "density": 0.43157894736842106,
+    "precision": 0.8643599999999999,
+    "experiments": 30,
+    "mean_cost": 584.749720874483
+}{
+    "i_density": 9,
+    "i_precision": 3,
+    "density": 0.43157894736842106,
+    "precision": 0.8470728,
+    "experiments": 30,
+    "mean_cost": 590.4887912746589
+}{
+    "i_density": 9,
+    "i_precision": 4,
+    "density": 0.43157894736842106,
+    "precision": 0.8301313439999999,
+    "experiments": 30,
+    "mean_cost": 600.1862175938317
+}
