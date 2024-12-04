@@ -16,8 +16,8 @@ from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield,
 def run_simulation():
 
     # Simulation attributes
-    i_density = 9 # index into density array
-    i_precision = 4 # index into precision array
+    i_density = 10 # index into density array
+    i_precision = 9 # index into precision array
     c_experiment = 0 # iteration count of the experiment-loop
     n_density = 20 # number of values to generate for the P_density array
     n_precision = 20 # number of values to generate for the P_range array
