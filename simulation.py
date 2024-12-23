@@ -16,12 +16,12 @@ from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield,
 def run_simulation():
 
     # Simulation attributes
-    i_density = 10 # index into density array
-    i_precision = 9 # index into precision array
+    i_density = 19 # index into density array
+    i_precision = 0 # index into precision array
     c_experiment = 0 # iteration count of the experiment-loop
     n_density = 20 # number of values to generate for the P_density array
     n_precision = 20 # number of values to generate for the P_range array
-    n_experiment = 30 # number of experiments for each density/precision combination
+    n_experiment = 100 # number of experiments for each density/precision combination
     p_1m = .9  # Precision at 1m established with actual drone camera and YOLOv9
     discount = .98 # Used to reduce precision when generating a range
     R = 0.98  # Target Recall
@@ -41,6 +41,9 @@ def run_simulation():
     # Generate a range of densities between the low and high values
     D_range = list(np.linspace(low_density, high_density, n_density))
     print(f"Density range: {D_range}")
+
+    ### Logging ###
+    precision_increment_start_time = time.time()
 
     # Set the density
     density = D_range[i_density] # MANUALLY select the density value
@@ -100,22 +103,31 @@ def run_simulation():
         experiment_log['density'] = density
         experiment_log['precision'] = P
         experiment_log['cost'] = round(tour_cost, 2)
+        experiment_log['tsp_tour'] = tsp_path
         experiment_log['tsp_exec_time'] = round(tsp_exec_time, 2)
+        experiment_log['experiment_exec_time'] = round(experiment_exec_time, 2)
 
-        e_file_path = f"logs/d{i_density}_p{i_precision}_experiment_log.json"
+        e_file_path = f"logs/networkx_{n_experiment}exp_high_d{i_density}_high_p{i_precision}_experiment_log.json"
         json.dump(experiment_log, open(e_file_path, "a"), indent=4)
 
         if c_experiment == n_experiment-1:
+            # Log time taken for precision increment
+            precision_increment_end_time = time.time()
+            precision_increment_exec_time = precision_increment_end_time - precision_increment_start_time
+            print(f"Precision increment exec time: {round(experiment_exec_time, 2)} seconds")
+
+            # Log to file
             pd_log = {}
             pd_log['i_density'] = i_density
             pd_log['i_precision'] = i_precision
             pd_log['density'] = density
             pd_log['precision'] = P
             pd_log['experiments'] = n_experiment
-            # pd_log['result_list'] = result_array
+            pd_log['tour_cost_list'] = result_array
             pd_log['mean_cost'] = statistics.mean(result_array)
+            pd_log['total_execution_time'] = round(precision_increment_exec_time, 2)
 
-            p_file_path = f"logs/d{i_density}_precision_density_log.json"
+            p_file_path = f"logs/networkx_{n_experiment}exp_high_p_{i_precision}_high_d_{i_density}_execution_log.json"
             json.dump(pd_log, open(p_file_path, "a"), indent=4)
         ###############
 

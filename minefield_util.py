@@ -74,7 +74,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from networkx.algorithms.approximation import traveling_salesman_problem
-from networkx.algorithms.approximation.traveling_salesman import greedy_tsp
+from networkx.algorithms.approximation.traveling_salesman import greedy_tsp, christofides
 
 
 def gen_minefield(density,  shape):
@@ -229,8 +229,9 @@ def get_tour(F, cell_side = 1):
             G.add_edge(i, j, weight=distance)
     
     # Use networkx's approximation for the Traveling Salesman Problem
-    tsp_path = greedy_tsp(G, weight='weight') # traveling_salesman_problem(G, weight='weight')
-    
+    # tsp_path = traveling_salesman_problem(G, weight='weight')
+    tsp_path = greedy_tsp(G, weight='weight')
+    # tsp_path = christofides(G, weight='weight')
     return tsp_path, G
     
     
