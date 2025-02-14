@@ -230,8 +230,8 @@ def get_tour(F, cell_side = 1):
     
     # Use networkx's approximation for the Traveling Salesman Problem
     # tsp_path = traveling_salesman_problem(G, weight='weight')
-    tsp_path = greedy_tsp(G, weight='weight')
-    # tsp_path = christofides(G, weight='weight')
+    # tsp_path = greedy_tsp(G, weight='weight')
+    tsp_path = christofides(G, weight='weight')
     return tsp_path, G
     
     
