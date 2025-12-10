@@ -4,7 +4,22 @@
     "count": 1,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 93.72,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        11,
+        10,
+        9,
+        8,
+        7,
+        5,
+        3,
+        0
+    ],
+    "cost": 80.85,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -12,7 +27,23 @@
     "count": 2,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 88.6,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        3,
+        2,
+        5,
+        6,
+        8,
+        10,
+        12,
+        11,
+        9,
+        7,
+        0
+    ],
+    "cost": 97.48,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -20,7 +51,16 @@
     "count": 3,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 102.46,
+    "tsp_path": [
+        0,
+        3,
+        2,
+        1,
+        5,
+        4,
+        0
+    ],
+    "cost": 88.66,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -28,7 +68,20 @@
     "count": 4,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 102.83,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        6,
+        5,
+        2,
+        7,
+        8,
+        9,
+        4,
+        0
+    ],
+    "cost": 84.39,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -36,7 +89,23 @@
     "count": 5,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 92.33,
+    "tsp_path": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        9,
+        11,
+        3,
+        1,
+        5,
+        7,
+        12,
+        0
+    ],
+    "cost": 124.72,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -44,7 +113,15 @@
     "count": 6,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 56.44,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        0
+    ],
+    "cost": 77.38,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -52,15 +129,36 @@
     "count": 7,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 114.85,
-    "tsp_exec_time": 0.01
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+    ],
+    "cost": 82.4,
+    "tsp_exec_time": 0.0
 }{
     "i_density": 0,
     "i_precision": 0,
     "count": 8,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 75.49,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        5,
+        4,
+        7,
+        0
+    ],
+    "cost": 77.88,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -68,7 +166,18 @@
     "count": 9,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 91.33,
+    "tsp_path": [
+        0,
+        1,
+        5,
+        7,
+        4,
+        6,
+        2,
+        3,
+        0
+    ],
+    "cost": 92.68,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -76,7 +185,15 @@
     "count": 10,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 97.29,
+    "tsp_path": [
+        0,
+        3,
+        4,
+        1,
+        2,
+        0
+    ],
+    "cost": 61.49,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -84,7 +201,17 @@
     "count": 11,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 94.69,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        5,
+        1,
+        4,
+        6,
+        0
+    ],
+    "cost": 84.8,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -92,7 +219,29 @@
     "count": 12,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 98.01,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        10,
+        12,
+        8,
+        7,
+        16,
+        17,
+        14,
+        13,
+        9,
+        11,
+        18,
+        15,
+        5,
+        0
+    ],
+    "cost": 125.46,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -100,7 +249,18 @@
     "count": 13,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 84.46,
+    "tsp_path": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        4,
+        3,
+        1,
+        0
+    ],
+    "cost": 81.04,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -108,7 +268,22 @@
     "count": 14,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 34.06,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        9,
+        10,
+        8,
+        7,
+        5,
+        6,
+        3,
+        11,
+        0
+    ],
+    "cost": 108.95,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -116,7 +291,22 @@
     "count": 15,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 71.19,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        6,
+        9,
+        11,
+        7,
+        8,
+        4,
+        5,
+        2,
+        10,
+        0
+    ],
+    "cost": 118.39,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -124,7 +314,15 @@
     "count": 16,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 87.39,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        4,
+        1,
+        0
+    ],
+    "cost": 59.02,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -132,7 +330,19 @@
     "count": 17,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 76.53,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        6,
+        0
+    ],
+    "cost": 84.05,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -140,7 +350,19 @@
     "count": 18,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 100.79,
+    "tsp_path": [
+        0,
+        3,
+        4,
+        5,
+        8,
+        6,
+        7,
+        2,
+        1,
+        0
+    ],
+    "cost": 105.17,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -148,7 +370,23 @@
     "count": 19,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 71.3,
+    "tsp_path": [
+        0,
+        2,
+        4,
+        7,
+        8,
+        6,
+        3,
+        1,
+        10,
+        12,
+        9,
+        11,
+        5,
+        0
+    ],
+    "cost": 107.9,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -156,7 +394,20 @@
     "count": 20,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 102.18,
+    "tsp_path": [
+        0,
+        4,
+        3,
+        9,
+        6,
+        8,
+        7,
+        5,
+        2,
+        1,
+        0
+    ],
+    "cost": 95.55,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -164,15 +415,39 @@
     "count": 21,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 124.92,
-    "tsp_exec_time": 0.01
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        7,
+        6,
+        5,
+        9,
+        10,
+        12,
+        11,
+        13,
+        8,
+        0
+    ],
+    "cost": 113.07,
+    "tsp_exec_time": 0.0
 }{
     "i_density": 0,
     "i_precision": 0,
     "count": 22,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 126.5,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        0
+    ],
+    "cost": 74.23,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -180,7 +455,19 @@
     "count": 23,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 109.74,
+    "tsp_path": [
+        0,
+        3,
+        4,
+        5,
+        8,
+        6,
+        7,
+        2,
+        1,
+        0
+    ],
+    "cost": 91.44,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -188,7 +475,22 @@
     "count": 24,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 81.2,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        2,
+        6,
+        7,
+        8,
+        10,
+        11,
+        5,
+        3,
+        9,
+        0
+    ],
+    "cost": 126.8,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -196,7 +498,28 @@
     "count": 25,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 88.55,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12,
+        16,
+        17,
+        14,
+        11,
+        13,
+        15,
+        6,
+        4,
+        3,
+        0
+    ],
+    "cost": 127.28,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -204,7 +527,16 @@
     "count": 26,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 78.51,
+    "tsp_path": [
+        0,
+        3,
+        1,
+        2,
+        4,
+        5,
+        0
+    ],
+    "cost": 87.59,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -212,7 +544,22 @@
     "count": 27,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 62.59,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        7,
+        9,
+        8,
+        11,
+        10,
+        6,
+        2,
+        3,
+        5,
+        0
+    ],
+    "cost": 91.01,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -220,7 +567,25 @@
     "count": 28,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 64.16,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        8,
+        5,
+        10,
+        11,
+        13,
+        12,
+        9,
+        14,
+        6,
+        2,
+        0
+    ],
+    "cost": 120.33,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -228,7 +593,22 @@
     "count": 29,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 47.24,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        6,
+        7,
+        8,
+        5,
+        4,
+        1,
+        11,
+        9,
+        10,
+        0
+    ],
+    "cost": 109.44,
     "tsp_exec_time": 0.0
 }{
     "i_density": 0,
@@ -236,6 +616,1491 @@
     "count": 30,
     "density": 0.01,
     "precision": 0.9,
-    "cost": 126.82,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        5,
+        8,
+        7,
+        9,
+        6,
+        4,
+        2,
+        0
+    ],
+    "cost": 99.76,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 31,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        2,
+        3,
+        5,
+        6,
+        7,
+        1,
+        0
+    ],
+    "cost": 101.39,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 32,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        11,
+        10,
+        8,
+        9,
+        7,
+        4,
+        6,
+        0
+    ],
+    "cost": 107.58,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 33,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        5,
+        2,
+        1,
+        6,
+        4,
+        7,
+        8,
+        0
+    ],
+    "cost": 98.39,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 34,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        3,
+        5,
+        1,
+        6,
+        7,
+        2,
+        8,
+        10,
+        9,
+        0
+    ],
+    "cost": 103.33,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 35,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        9,
+        7,
+        8,
+        10,
+        12,
+        11,
+        2,
+        4,
+        0
+    ],
+    "cost": 117.6,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 36,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12,
+        7,
+        6,
+        5,
+        2,
+        3,
+        0
+    ],
+    "cost": 84.74,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 37,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        8,
+        10,
+        6,
+        11,
+        9,
+        7,
+        0
+    ],
+    "cost": 96.16,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 38,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        9,
+        8,
+        10,
+        11,
+        13,
+        7,
+        5,
+        6,
+        12,
+        0
+    ],
+    "cost": 123.25,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 39,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        0
+    ],
+    "cost": 57.42,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 40,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        7,
+        9,
+        10,
+        12,
+        11,
+        13,
+        8,
+        5,
+        4,
+        2,
+        1,
+        3,
+        6,
+        0
+    ],
+    "cost": 103.68,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 41,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4,
+        0
+    ],
+    "cost": 75.47,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 42,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        5,
+        7,
+        6,
+        8,
+        3,
+        2,
+        1,
+        0
+    ],
+    "cost": 82.24,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 43,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        1,
+        5,
+        4,
+        0
+    ],
+    "cost": 68.57,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 44,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        6,
+        7,
+        5,
+        8,
+        0
+    ],
+    "cost": 116.05,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 45,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        4,
+        3,
+        1,
+        0
+    ],
+    "cost": 82.3,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 46,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        5,
+        7,
+        6,
+        3,
+        0
+    ],
+    "cost": 89.74,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 47,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        0
+    ],
+    "cost": 75.08,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 48,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        6,
+        5,
+        4,
+        2,
+        1,
+        7,
+        0
+    ],
+    "cost": 109.17,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 49,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        16,
+        15,
+        10,
+        13,
+        4,
+        3,
+        2,
+        14,
+        17,
+        18,
+        0
+    ],
+    "cost": 140.07,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 50,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        5,
+        8,
+        9,
+        7,
+        6,
+        11,
+        10,
+        3,
+        2,
+        0
+    ],
+    "cost": 110.82,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 51,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        6,
+        4,
+        5,
+        7,
+        1,
+        0
+    ],
+    "cost": 76.31,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 52,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        5,
+        6,
+        4,
+        3,
+        9,
+        11,
+        7,
+        8,
+        10,
+        0
+    ],
+    "cost": 102.16,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 53,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        5,
+        4,
+        6,
+        8,
+        9,
+        0
+    ],
+    "cost": 75.49,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 54,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        7,
+        1,
+        0
+    ],
+    "cost": 64.74,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 55,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        6,
+        8,
+        11,
+        10,
+        7,
+        9,
+        12,
+        5,
+        3,
+        2,
+        0
+    ],
+    "cost": 115.29,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 56,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        0
+    ],
+    "cost": 67.41,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 57,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        1,
+        4,
+        5,
+        6,
+        8,
+        9,
+        7,
+        2,
+        0
+    ],
+    "cost": 76.57,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 58,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        2,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0
+    ],
+    "cost": 82.3,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 59,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        0
+    ],
+    "cost": 75.28,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 60,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        6,
+        7,
+        9,
+        11,
+        8,
+        5,
+        4,
+        3,
+        2,
+        12,
+        13,
+        10,
+        0
+    ],
+    "cost": 139.28,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 61,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        7,
+        11,
+        10,
+        8,
+        9,
+        5,
+        13,
+        14,
+        12,
+        6,
+        0
+    ],
+    "cost": 103.48,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 62,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        4,
+        3,
+        5,
+        8,
+        9,
+        10,
+        0
+    ],
+    "cost": 119.17,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 63,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        4,
+        5,
+        3,
+        1,
+        0
+    ],
+    "cost": 61.01,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 64,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        5,
+        4,
+        1,
+        6,
+        0
+    ],
+    "cost": 103.43,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 65,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        0
+    ],
+    "cost": 42.1,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 66,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        4,
+        3,
+        8,
+        9,
+        13,
+        6,
+        10,
+        11,
+        12,
+        14,
+        7,
+        5,
+        2,
+        0
+    ],
+    "cost": 95.55,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 67,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        5,
+        6,
+        8,
+        9,
+        7,
+        2,
+        4,
+        3,
+        0
+    ],
+    "cost": 93.25,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 68,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        6,
+        9,
+        7,
+        8,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+    ],
+    "cost": 101.43,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 69,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4,
+        0
+    ],
+    "cost": 68.38,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 70,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        2,
+        5,
+        8,
+        9,
+        12,
+        11,
+        7,
+        6,
+        4,
+        10,
+        1,
+        0
+    ],
+    "cost": 117.35,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 71,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        10,
+        6,
+        3,
+        0
+    ],
+    "cost": 117.27,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 72,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        1,
+        0
+    ],
+    "cost": 64.58,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 73,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        5,
+        4,
+        3,
+        1,
+        6,
+        0
+    ],
+    "cost": 94.13,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 74,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        5,
+        3,
+        0
+    ],
+    "cost": 89.03,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 75,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        6,
+        1,
+        4,
+        8,
+        10,
+        9,
+        14,
+        12,
+        13,
+        11,
+        17,
+        18,
+        15,
+        16,
+        0
+    ],
+    "cost": 152.11,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 76,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        6,
+        7,
+        5,
+        8,
+        9,
+        4,
+        1,
+        0
+    ],
+    "cost": 99.98,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 77,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        5,
+        6,
+        4,
+        2,
+        1,
+        0
+    ],
+    "cost": 88.1,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 78,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        7,
+        2,
+        10,
+        11,
+        8,
+        5,
+        6,
+        4,
+        9,
+        12,
+        0
+    ],
+    "cost": 119.38,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 79,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        4,
+        8,
+        7,
+        6,
+        10,
+        11,
+        12,
+        9,
+        5,
+        1,
+        0
+    ],
+    "cost": 97.36,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 80,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        1,
+        2,
+        6,
+        8,
+        10,
+        14,
+        15,
+        18,
+        16,
+        13,
+        11,
+        12,
+        9,
+        5,
+        3,
+        7,
+        17,
+        0
+    ],
+    "cost": 139.91,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 81,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        6,
+        1,
+        3,
+        8,
+        9,
+        0
+    ],
+    "cost": 115.4,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 82,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        5,
+        7,
+        6,
+        4,
+        1,
+        8,
+        2,
+        0
+    ],
+    "cost": 103.29,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 83,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        5,
+        6,
+        4,
+        3,
+        2,
+        0
+    ],
+    "cost": 89.05,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 84,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        11,
+        12,
+        14,
+        5,
+        3,
+        0
+    ],
+    "cost": 96.25,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 85,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        5,
+        8,
+        7,
+        10,
+        14,
+        16,
+        13,
+        12,
+        11,
+        9,
+        15,
+        17,
+        6,
+        2,
+        4,
+        1,
+        0
+    ],
+    "cost": 121.0,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 86,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        0
+    ],
+    "cost": 70.86,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 87,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        0
+    ],
+    "cost": 60.48,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 88,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        4,
+        6,
+        2,
+        8,
+        9,
+        0
+    ],
+    "cost": 109.53,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 89,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        2,
+        6,
+        5,
+        4,
+        1,
+        7,
+        9,
+        10,
+        11,
+        8,
+        0
+    ],
+    "cost": 122.96,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 90,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        1,
+        3,
+        7,
+        8,
+        9,
+        5,
+        6,
+        4,
+        0
+    ],
+    "cost": 91.26,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 91,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        4,
+        1,
+        2,
+        7,
+        8,
+        10,
+        9,
+        6,
+        5,
+        0
+    ],
+    "cost": 98.47,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 92,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        3,
+        0
+    ],
+    "cost": 61.98,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 93,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        1,
+        3,
+        2,
+        0
+    ],
+    "cost": 75.94,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 94,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        3,
+        5,
+        10,
+        11,
+        12,
+        14,
+        13,
+        9,
+        8,
+        7,
+        4,
+        6,
+        1,
+        2,
+        0
+    ],
+    "cost": 108.58,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 95,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        6,
+        2,
+        8,
+        0
+    ],
+    "cost": 117.28,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 96,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        1,
+        5,
+        8,
+        6,
+        7,
+        9,
+        3,
+        2,
+        0
+    ],
+    "cost": 119.05,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 97,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        10,
+        12,
+        1,
+        2,
+        3,
+        5,
+        13,
+        14,
+        16,
+        15,
+        0
+    ],
+    "cost": 104.98,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 98,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        3,
+        2,
+        0
+    ],
+    "cost": 59.27,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 99,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        2,
+        3,
+        5,
+        4,
+        1,
+        6,
+        0
+    ],
+    "cost": 113.96,
+    "tsp_exec_time": 0.0
+}{
+    "i_density": 0,
+    "i_precision": 0,
+    "count": 100,
+    "density": 0.01,
+    "precision": 0.9,
+    "tsp_path": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        10,
+        7,
+        3,
+        0
+    ],
+    "cost": 103.76,
     "tsp_exec_time": 0.0
 }

@@ -16,12 +16,12 @@ from minefield_util import gen_flag_field, try_gen_flagfield, try_gen_minefield,
 def run_simulation():
 
     # Simulation attributes
-    i_density = 10 # index into density array
-    i_precision = 9 # index into precision array
+    i_density = 19 # index into density array
+    i_precision = 19 # index into precision array
     c_experiment = 0 # iteration count of the experiment-loop
     n_density = 20 # number of values to generate for the P_density array
     n_precision = 20 # number of values to generate for the P_range array
-    n_experiment = 30 # number of experiments for each density/precision combination
+    n_experiment = 100 # number of experiments for each density/precision combination
     p_1m = .9  # Precision at 1m established with actual drone camera and YOLOv9
     discount = .98 # Used to reduce precision when generating a range
     R = 0.98  # Target Recall
@@ -46,6 +46,7 @@ def run_simulation():
     density = D_range[i_density] # MANUALLY select the density value
     print(f"Density: {density}")
     result_array = []
+    #for i_precision, p in enumerate(P_range):
     for k in range(n_experiment):
         ### Logging ###
         experiment_start_time = time.time()
@@ -99,6 +100,9 @@ def run_simulation():
         experiment_log['count'] = c_experiment
         experiment_log['density'] = density
         experiment_log['precision'] = P
+        # experiment_log['minefield'] = M
+        # experiment_log['flag_field'] = F
+        experiment_log['tsp_path'] = tsp_path
         experiment_log['cost'] = round(tour_cost, 2)
         experiment_log['tsp_exec_time'] = round(tsp_exec_time, 2)
 
@@ -112,11 +116,14 @@ def run_simulation():
             pd_log['density'] = density
             pd_log['precision'] = P
             pd_log['experiments'] = n_experiment
-            # pd_log['result_list'] = result_array
+            pd_log['result_list'] = result_array
             pd_log['mean_cost'] = statistics.mean(result_array)
 
             p_file_path = f"logs/d{i_density}_precision_density_log.json"
             json.dump(pd_log, open(p_file_path, "a"), indent=4)
+
+            # RESET
+            # c_experiment = 0
         ###############
 
 
