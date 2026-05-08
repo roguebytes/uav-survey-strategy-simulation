@@ -1,0 +1,141 @@
+{
+    "i_density": 3,
+    "i_precision": 0,
+    "density": 0.15052631578947367,
+    "precision": 0.9,
+    "experiments": 30,
+    "mean_cost": 326.8145390932457
+}{
+    "i_density": 3,
+    "i_precision": 1,
+    "density": 0.15052631578947367,
+    "precision": 0.882,
+    "experiments": 30,
+    "mean_cost": 318.3263164309578
+}{
+    "i_density": 3,
+    "i_precision": 2,
+    "density": 0.15052631578947367,
+    "precision": 0.8643599999999999,
+    "experiments": 30,
+    "mean_cost": 333.68504824160436
+}{
+    "i_density": 3,
+    "i_precision": 3,
+    "density": 0.15052631578947367,
+    "precision": 0.8470728,
+    "experiments": 30,
+    "mean_cost": 333.52074288692154
+}{
+    "i_density": 3,
+    "i_precision": 4,
+    "density": 0.15052631578947367,
+    "precision": 0.8301313439999999,
+    "experiments": 30,
+    "mean_cost": 337.9499913821503
+}{
+    "i_density": 3,
+    "i_precision": 5,
+    "density": 0.15052631578947367,
+    "precision": 0.81352871712,
+    "experiments": 30,
+    "mean_cost": 343.34771378674395
+}{
+    "i_density": 3,
+    "i_precision": 6,
+    "density": 0.15052631578947367,
+    "precision": 0.7972581427776,
+    "experiments": 30,
+    "mean_cost": 342.5778083930871
+}{
+    "i_density": 3,
+    "i_precision": 7,
+    "density": 0.15052631578947367,
+    "precision": 0.781312979922048,
+    "experiments": 30,
+    "mean_cost": 349.957641587488
+}{
+    "i_density": 3,
+    "i_precision": 8,
+    "density": 0.15052631578947367,
+    "precision": 0.765686720323607,
+    "experiments": 30,
+    "mean_cost": 351.70264650810964
+}{
+    "i_density": 3,
+    "i_precision": 9,
+    "density": 0.15052631578947367,
+    "precision": 0.7503729859171349,
+    "experiments": 30,
+    "mean_cost": 352.86360800977906
+}{
+    "i_density": 3,
+    "i_precision": 10,
+    "density": 0.15052631578947367,
+    "precision": 0.735365526198792,
+    "experiments": 30,
+    "mean_cost": 355.03654278543473
+}{
+    "i_density": 3,
+    "i_precision": 11,
+    "density": 0.15052631578947367,
+    "precision": 0.7206582156748162,
+    "experiments": 30,
+    "mean_cost": 365.929000311165
+}{
+    "i_density": 3,
+    "i_precision": 12,
+    "density": 0.15052631578947367,
+    "precision": 0.7062450513613199,
+    "experiments": 30,
+    "mean_cost": 363.087330317115
+}{
+    "i_density": 3,
+    "i_precision": 13,
+    "density": 0.15052631578947367,
+    "precision": 0.6921201503340935,
+    "experiments": 30,
+    "mean_cost": 368.8661971507456
+}{
+    "i_density": 3,
+    "i_precision": 14,
+    "density": 0.15052631578947367,
+    "precision": 0.6782777473274115,
+    "experiments": 30,
+    "mean_cost": 374.13158879373293
+}{
+    "i_density": 3,
+    "i_precision": 15,
+    "density": 0.15052631578947367,
+    "precision": 0.6647121923808634,
+    "experiments": 30,
+    "mean_cost": 373.96352363270904
+}{
+    "i_density": 3,
+    "i_precision": 16,
+    "density": 0.15052631578947367,
+    "precision": 0.6514179485332461,
+    "experiments": 30,
+    "mean_cost": 382.06166238773847
+}{
+    "i_density": 3,
+    "i_precision": 17,
+    "density": 0.15052631578947367,
+    "precision": 0.6383895895625812,
+    "experiments": 30,
+    "mean_cost": 381.1227742441443
+}{
+    "i_density": 3,
+    "i_precision": 18,
+    "density": 0.15052631578947367,
+    "precision": 0.6256217977713294,
+    "experiments": 30,
+    "mean_cost": 381.5475528390012
+}{
+    "i_density": 3,
+    "i_precision": 19,
+    "density": 0.15052631578947367,
+    "precision": 0.6131093618159029,
+    "experiments": 30,
+    "mean_cost": 387.89898950537986
+}
