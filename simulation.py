@@ -24,7 +24,7 @@ def run_simulation():
     n_experiment = 100 # number of experiments for each density/precision combination
     p_1m = .9  # Precision at 1m established with actual drone camera and YOLOv9
     discount = .98 # Used to reduce precision when generating a range
-    R = 0.98  # Target Recall
+    R = 0.95  # Target Recall
 
     # Minefield attributes
     rows = 30
