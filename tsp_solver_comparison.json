@@ -1,0 +1,65 @@
+{
+  "Low density, low precision": {
+    "density": 0.01,
+    "precision": 0.6131093618159029,
+    "mean_nodes": 13.49,
+    "greedy": {
+      "mean_cost": 107.05304523837054,
+      "total_time_s": 0.0028235912322998047
+    },
+    "christofides": {
+      "mean_cost": 100.46137172799413,
+      "total_time_s": 0.05460095405578613
+    }
+  },
+  "Low density, high precision": {
+    "density": 0.01,
+    "precision": 0.9,
+    "mean_nodes": 9.81,
+    "greedy": {
+      "mean_cost": 94.93536175760623,
+      "total_time_s": 0.012472152709960938
+    },
+    "christofides": {
+      "mean_cost": 89.29073316970869,
+      "total_time_s": 0.03376889228820801
+    }
+  },
+  "High density, low precision": {
+    "density": 0.9,
+    "precision": 0.6131093618159029,
+    "mean_nodes": 860.24,
+    "greedy": {
+      "mean_cost": 925.3408017581526,
+      "total_time_s": 4.013079881668091
+    },
+    "christofides": {
+      "mean_cost": 910.2765572122473,
+      "total_time_s": 113.361088514328
+    }
+  },
+  "High density, high precision": {
+    "density": 0.9,
+    "precision": 0.9,
+    "mean_nodes": 852.89,
+    "greedy": {
+      "mean_cost": 919.4983217063112,
+      "total_time_s": 3.982574462890625
+    },
+    "christofides": {
+      "mean_cost": 909.5997171377695,
+      "total_time_s": 118.78111219406128
+    }
+  },
+  "_meta": {
+    "R": 0.95,
+    "grid": [
+      30,
+      30
+    ],
+    "experiments": 100,
+    "seed": 0,
+    "networkx": "3.3",
+    "total_time_s": 285.92975211143494
+  }
+}
