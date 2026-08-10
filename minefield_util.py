@@ -6,7 +6,7 @@ Created on Wed Sep 18 12:01:21 2024
 Last updated Thu 19th Sep
 
 @author: frederic
-f.maire@gmail.com
+f.maire@qut.edu.au
 
 
 
