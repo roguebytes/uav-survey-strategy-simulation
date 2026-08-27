@@ -2,11 +2,11 @@
 
 Simulation code for the manuscript **"Fly High or Fly Low? Adaptive UAV Search
 Strategies for Time-Efficient Aerial Detection"** (Loewenich, Maire, Sandino,
-Gonzalez — submitted to *Remote Sensing*, 2026, manuscript under review).
+Gonzalez; submitted to *Remote Sensing*, 2026, manuscript under review).
 
-The code estimates the expected cost of a two-stage UAV search strategy — a
+The code estimates the expected cost of a two-stage UAV search strategy (a
 rapid high-altitude survey followed by a low-altitude verification flight over
-detector-flagged locations — and compares it against a constant low-altitude
+detector-flagged locations) and compares it against a constant low-altitude
 survey baseline on **total mission cost** (survey leg plus verification
 flight). The detector is characterised by two density-independent per-cell
 probabilities, recall and false-positive rate, with precision a derived
@@ -20,7 +20,7 @@ altitude ratio r* = 1/(1 − V/C₁) generalises the comparison to any platform.
 |---|---|
 | `minefield_util.py` | Core model: environment generation, flag-field sampling (precision-based and rate-based), TSP tour costing |
 | `run_matrix_fpr.py` | Generates the decision table under the (R, FPR) parameterisation (Table 3 of the paper) |
-| `matrix_fpr_R95_sweep_001_040.csv` | The decision-table sweep as reported (R = 0.95, FPR 0.01–0.40 geometric) |
+| `matrix_fpr_R95_sweep_001_040.csv` | The decision-table sweep as reported (R = 0.95, FPR 0.01-0.40 geometric) |
 | `survey_cost.py` | Lawnmower survey-leg costs and the total-mission sensitivity figure (Figure 5) |
 | `breakeven_map.py` | Universal break-even map r*(ρ, FPR) (Figure 6) |
 | `uncertainty_analysis.py` | Cell-mean confidence intervals and the N = 100 convergence analysis |
@@ -80,4 +80,4 @@ Submitted to Remote Sensing, 2026.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT; see [LICENSE](LICENSE).
