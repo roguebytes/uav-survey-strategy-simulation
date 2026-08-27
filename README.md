@@ -1,7 +1,7 @@
 # UAV Survey Strategy Simulation
 
-Simulation code for the manuscript **"Fly High or Fly Low? Adaptive UAV Search
-Strategies for Time-Efficient Aerial Detection"** (Loewenich, Maire, Sandino,
+Simulation code for the manuscript **"Fly High or Fly Low? Selecting
+Time-Efficient UAV Search Strategies for High-Recall Aerial Detection"** (Loewenich, Maire, Sandino,
 Gonzalez; submitted to *Remote Sensing*, 2026, manuscript under review).
 
 The code estimates the expected cost of a two-stage UAV search strategy (a
@@ -75,7 +75,8 @@ reported values exactly.
 
 Citation details will be added on publication. Until then, please cite the
 manuscript: Loewenich, F.; Maire, F.; Sandino, J.; Gonzalez, F. *Fly High or
-Fly Low? Adaptive UAV Search Strategies for Time-Efficient Aerial Detection.*
+Fly Low? Selecting Time-Efficient UAV Search Strategies for High-Recall Aerial
+Detection.*
 Submitted to Remote Sensing, 2026.
 
 ## License
