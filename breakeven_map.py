@@ -4,7 +4,7 @@
 V/C1 is dimensionless and grid-size-insensitive (2.5-4.4% drift over
 N = 20/30/45), so the requirement surface is platform-independent; a platform
 contributes only its achievable (FPR, r) operating line. The figure overlays
-the two measured operating points reported in the paper (Figure 6).
+the two measured operating points reported in the paper (Figure 7).
 
 Output: fig_breakeven_map.png
 """

@@ -21,8 +21,8 @@ altitude ratio r* = 1/(1 − V/C₁) generalises the comparison to any platform.
 | `minefield_util.py` | Core model: environment generation, flag-field sampling (precision-based and rate-based), TSP tour costing |
 | `run_matrix_fpr.py` | Generates the decision table under the (R, FPR) parameterisation (Table 3 of the paper) |
 | `matrix_fpr_R95_sweep_001_040.csv` | The decision-table sweep as reported (R = 0.95, FPR 0.01-0.40 geometric) |
-| `survey_cost.py` | Lawnmower survey-leg costs and the total-mission sensitivity figure (Figure 5) |
-| `breakeven_map.py` | Universal break-even map r*(ρ, FPR) (Figure 6) |
+| `survey_cost.py` | Lawnmower survey-leg costs and the total-mission sensitivity figure (Figure 6) |
+| `breakeven_map.py` | Universal break-even map r*(ρ, FPR) (Figure 7) |
 | `uncertainty_analysis.py` | Cell-mean confidence intervals and the N = 100 convergence analysis |
 | `uncertainty_analysis.json` | Results of that analysis as reported |
 | `clustering_analysis.py` | Thomas cluster process vs independent placement |
@@ -56,8 +56,8 @@ The TSP solver comparison (Table 2):
 
     python tsp_solver_comparison.py --experiments 100 --seed 0
 
-The survey-cost sensitivity figure (Figure 5) and the break-even map
-(Figure 6), both reading the decision-table sweep above:
+The survey-cost sensitivity figure (Figure 6) and the break-even map
+(Figure 7), both reading the decision-table sweep above:
 
     python survey_cost.py
     python breakeven_map.py

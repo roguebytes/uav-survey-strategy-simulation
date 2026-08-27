@@ -15,7 +15,7 @@ altitude ratio for a verification cost V is
 
 Reads the decision-table sweep (matrix_fpr_R95_sweep_001_040.csv) and plots
 the total-mission saving of Strategy 2 against the altitude ratio for a range
-of target densities, under both cost models (Figure 5 of the paper).
+of target densities, under both cost models (Figure 6 of the paper).
 
 Output: fig_survey_cost_sensitivity.png
 """
