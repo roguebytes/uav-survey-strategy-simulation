@@ -7,21 +7,38 @@ Gonzalez — submitted to *Remote Sensing*, 2026, manuscript under review).
 The code estimates the expected cost of a two-stage UAV search strategy — a
 rapid high-altitude survey followed by a low-altitude verification flight over
 detector-flagged locations — and compares it against a constant low-altitude
-survey baseline. Sweeping target density against detector precision produces
-the pre-computed decision matrix reported in the paper.
+survey baseline on **total mission cost** (survey leg plus verification
+flight). The detector is characterised by two density-independent per-cell
+probabilities, recall and false-positive rate, with precision a derived
+output. Sweeping target density against false-positive rate produces the
+pre-computed decision table reported in the paper, and the derived break-even
+altitude ratio r* = 1/(1 − V/C₁) generalises the comparison to any platform.
 
 ## Contents
 
 | File | Purpose |
 |---|---|
-| `simulation.py` | Single-configuration simulation with detailed logging |
-| `minefield_util.py` | Core model: environment generation, conditional flag-field sampling, TSP tour costing |
-| `run_matrix.py` | Regenerates the full decision matrix (Table 2 of the paper) |
+| `minefield_util.py` | Core model: environment generation, flag-field sampling (precision-based and rate-based), TSP tour costing |
+| `run_matrix_fpr.py` | Generates the decision table under the (R, FPR) parameterisation (Table 2 of the paper) |
+| `matrix_fpr_R95_sweep_001_040.csv` | The decision-table sweep as reported (R = 0.95, FPR 0.01–0.40 geometric) |
+| `survey_cost.py` | Lawnmower survey-leg costs and the total-mission sensitivity figure (Figure 5) |
+| `breakeven_map.py` | Universal break-even map r*(ρ, FPR) (Figure 6) |
+| `uncertainty_analysis.py` | Cell-mean confidence intervals and the N = 100 convergence analysis |
+| `uncertainty_analysis.json` | Results of that analysis as reported |
+| `clustering_analysis.py` | Thomas cluster process vs independent placement |
+| `clustering_analysis.json` | Results of that comparison as reported |
 | `tsp_solver_comparison.py` | Reproduces the TSP solver comparison (Table 1 of the paper) |
 | `tsp_solver_comparison.json` | Results of that comparison as reported |
-| `logs/` | Raw experiment logs (JSON) from the reported runs |
+
+Retained from the original submission, for provenance:
+
+| File | Purpose |
+|---|---|
+| `run_matrix.py` | The original (density, precision) decision matrix; also provides the shared tour-costing routine |
+| `simulation.py` | Single-configuration simulation with detailed logging |
+| `logs/` | Raw experiment logs (JSON) from the original runs |
 | `docs/` | Experiment log spreadsheets |
-| `archive/` | Earlier exploratory scripts, kept for provenance |
+| `archive/` | Earlier exploratory scripts |
 
 ## Requirements
 
@@ -29,14 +46,30 @@ Python 3.10+, `numpy`, `networkx`, `matplotlib`.
 
 ## Reproducing the paper's results
 
-The decision matrix (Table 2), at recall target 0.95 with 100 environments
+The decision table (Table 2), at recall target 0.95 with 100 environments
 per cell and a fixed seed:
 
-    python run_matrix.py --R 0.95 --experiments 100 --seed 0
+    python run_matrix_fpr.py --R 0.95 --fpr-min 0.01 --fpr-max 0.40 \
+        --seed 0 --out matrix_fpr_R95_sweep_001_040.csv
 
 The TSP solver comparison (Table 1):
 
     python tsp_solver_comparison.py --experiments 100 --seed 0
+
+The survey-cost sensitivity figure (Figure 5) and the break-even map
+(Figure 6), both reading the decision-table sweep above:
+
+    python survey_cost.py
+    python breakeven_map.py
+
+The uncertainty and convergence analysis, and the clustered-placement
+comparison (both reported in the Discussion):
+
+    python uncertainty_analysis.py
+    python clustering_analysis.py
+
+All scripts are deterministic under the seeds shown and reproduce the
+reported values exactly.
 
 ## Citation
 

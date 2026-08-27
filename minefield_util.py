@@ -157,6 +157,29 @@ def gen_flag_field(M, TP, FP, FN ):
     return  F
     
     
+def gen_flag_field_rates(M, R, FPR):
+    """
+    Generate a flag field directly from the two per-cell rates.
+
+    R   : recall, prob( flag | target cell )
+    FPR : false-positive rate, prob( flag | empty cell )
+
+    Both inputs are probabilities by construction, independent of the target
+    density, so no derived quantity can exceed 1 (the failure mode of the
+    precision-based parameterisation in gen_flag_field, where
+    prob( flag | empty ) = FP/(C - n_targets) exceeds 1 at high density and
+    low precision, silently flagging every empty cell).
+
+    The derived, density-dependent precision of the simulated detector is
+        p(D) = R*D / (R*D + FPR*(1-D))
+    which is reported alongside results but never used to drive the simulation.
+    """
+    assert 0.0 <= R <= 1.0 and 0.0 <= FPR <= 1.0, "rates must be probabilities"
+    Z = np.random.rand(*M.shape)
+    F = ((Z <= R) & M) | ((Z <= FPR) & ~M)
+    return F
+
+
 def try_gen_minefield(r=7, c=7, d=0.2):
     '''
         Generate a minefield of r=4 rows and c=6 columns with a mine density d=0.2
