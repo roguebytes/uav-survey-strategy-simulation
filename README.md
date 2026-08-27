@@ -19,7 +19,7 @@ altitude ratio r* = 1/(1 − V/C₁) generalises the comparison to any platform.
 | File | Purpose |
 |---|---|
 | `minefield_util.py` | Core model: environment generation, flag-field sampling (precision-based and rate-based), TSP tour costing |
-| `run_matrix_fpr.py` | Generates the decision table under the (R, FPR) parameterisation (Table 2 of the paper) |
+| `run_matrix_fpr.py` | Generates the decision table under the (R, FPR) parameterisation (Table 3 of the paper) |
 | `matrix_fpr_R95_sweep_001_040.csv` | The decision-table sweep as reported (R = 0.95, FPR 0.01–0.40 geometric) |
 | `survey_cost.py` | Lawnmower survey-leg costs and the total-mission sensitivity figure (Figure 5) |
 | `breakeven_map.py` | Universal break-even map r*(ρ, FPR) (Figure 6) |
@@ -27,7 +27,7 @@ altitude ratio r* = 1/(1 − V/C₁) generalises the comparison to any platform.
 | `uncertainty_analysis.json` | Results of that analysis as reported |
 | `clustering_analysis.py` | Thomas cluster process vs independent placement |
 | `clustering_analysis.json` | Results of that comparison as reported |
-| `tsp_solver_comparison.py` | Reproduces the TSP solver comparison (Table 1 of the paper) |
+| `tsp_solver_comparison.py` | Reproduces the TSP solver comparison (Table 2 of the paper) |
 | `tsp_solver_comparison.json` | Results of that comparison as reported |
 
 Retained from the original submission, for provenance:
@@ -46,13 +46,13 @@ Python 3.10+, `numpy`, `networkx`, `matplotlib`.
 
 ## Reproducing the paper's results
 
-The decision table (Table 2), at recall target 0.95 with 100 environments
+The decision table (Table 3), at recall target 0.95 with 100 environments
 per cell and a fixed seed:
 
     python run_matrix_fpr.py --R 0.95 --fpr-min 0.01 --fpr-max 0.40 \
         --seed 0 --out matrix_fpr_R95_sweep_001_040.csv
 
-The TSP solver comparison (Table 1):
+The TSP solver comparison (Table 2):
 
     python tsp_solver_comparison.py --experiments 100 --seed 0
 

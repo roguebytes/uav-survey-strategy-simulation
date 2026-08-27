@@ -16,7 +16,7 @@ Two row modes are available:
 
 * Geometric FPR sweep (``--fpr-min``/``--fpr-max``): rows are FPR values
   spaced geometrically over the given range. This mode produced the decision
-  table in the paper (Table 2).
+  table in the paper (Table 3).
 * Precision-anchored rows (default): each row k corresponds to the nominal
   precision p_k = 0.9 * 0.98**k of the legacy matrix (see run_matrix.py),
   converted to an FPR at the field experiment's own target density rho_exp:
