@@ -66,6 +66,9 @@ def main():
         ax.axvline(15 / 11, color="grey", ls=":", lw=1.8)
         ax.text(15 / 11 + 0.04, -52, "this platform\n(15 m / 11 m)",
                 fontsize=10, color="grey")
+        ax.axvline(40 / 11, color="grey", ls="--", lw=1.8)
+        ax.text(40 / 11 - 0.04, -52, "this platform\n(40 m / 11 m)",
+                fontsize=10, color="grey", ha="right")
         ax.set_title(title, fontsize=12.5)
         ax.set_xlabel("Survey-to-verification altitude ratio $h_s/h_v$",
                       fontsize=12)
