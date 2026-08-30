@@ -14,6 +14,10 @@ output. Sweeping target density against false-positive rate produces the
 pre-computed decision table reported in the paper, and the derived break-even
 altitude ratio r* = 1/(1 − V/C₁) generalises the comparison to any platform.
 
+The field imagery, annotations, and detector predictions are released
+separately at
+https://github.com/roguebytes/uav-survey-strategy-dataset.
+
 ## Contents
 
 | File | Purpose |
