@@ -1,54 +1,54 @@
 {
-  "Low density, low precision": {
+  "Low density, high FPR": {
     "density": 0.01,
-    "precision": 0.6131093618159029,
-    "mean_nodes": 13.49,
+    "fpr": 0.4,
+    "mean_nodes": 365.05,
     "greedy": {
-      "mean_cost": 107.05304523837054,
-      "total_time_s": 0.0028235912322998047
+      "mean_cost": 585.1754479814044,
+      "total_time_s": 0.9419841766357422
     },
     "christofides": {
-      "mean_cost": 100.46137172799413,
-      "total_time_s": 0.05460095405578613
+      "mean_cost": 520.4640395874276,
+      "total_time_s": 72.52194213867188
     }
   },
-  "Low density, high precision": {
+  "Low density, low FPR": {
     "density": 0.01,
-    "precision": 0.9,
-    "mean_nodes": 9.81,
+    "fpr": 0.01,
+    "mean_nodes": 18.15,
     "greedy": {
-      "mean_cost": 94.93536175760623,
-      "total_time_s": 0.012472152709960938
+      "mean_cost": 131.09424549931597,
+      "total_time_s": 0.0037736892700195312
     },
     "christofides": {
-      "mean_cost": 89.29073316970869,
-      "total_time_s": 0.03376889228820801
+      "mean_cost": 120.76247258849166,
+      "total_time_s": 0.08384466171264648
     }
   },
-  "High density, low precision": {
+  "High density, high FPR": {
     "density": 0.9,
-    "precision": 0.6131093618159029,
-    "mean_nodes": 860.24,
+    "fpr": 0.4,
+    "mean_nodes": 807.68,
     "greedy": {
-      "mean_cost": 925.3408017581526,
-      "total_time_s": 4.013079881668091
+      "mean_cost": 896.8784728037239,
+      "total_time_s": 3.8739633560180664
     },
     "christofides": {
-      "mean_cost": 910.2765572122473,
-      "total_time_s": 113.361088514328
+      "mean_cost": 892.520589421525,
+      "total_time_s": 164.5476496219635
     }
   },
-  "High density, high precision": {
+  "High density, low FPR": {
     "density": 0.9,
-    "precision": 0.9,
-    "mean_nodes": 852.89,
+    "fpr": 0.01,
+    "mean_nodes": 769.74,
     "greedy": {
-      "mean_cost": 919.4983217063112,
-      "total_time_s": 3.982574462890625
+      "mean_cost": 880.6995069013435,
+      "total_time_s": 3.4578697681427
     },
     "christofides": {
-      "mean_cost": 909.5997171377695,
-      "total_time_s": 118.78111219406128
+      "mean_cost": 867.1336230792565,
+      "total_time_s": 193.96989941596985
     }
   },
   "_meta": {
@@ -60,6 +60,6 @@
     "experiments": 100,
     "seed": 0,
     "networkx": "3.3",
-    "total_time_s": 285.92975211143494
+    "total_time_s": 484.0360200405121
   }
 }

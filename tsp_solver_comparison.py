@@ -3,7 +3,8 @@
 
 Justifies the paper's choice of the greedy nearest-neighbour heuristic by
 comparing it against Christofides' 1.5-approximation at the four corners of the
-density-precision sweep.
+density-false-positive-rate sweep (ported 1 Sep 2026 from the legacy
+precision corners to the (R, FPR) parameterisation the paper now uses).
 
 Reuses the EXACT field/flag generation from minefield_util (R=0.95, 30x30 grid,
 seed 0, 100 experiments), so the greedy nearest-neighbour numbers are consistent
@@ -24,21 +25,21 @@ sys.path.insert(0, SIM_DIR)
 import numpy as np
 import networkx as nx
 from networkx.algorithms.approximation.traveling_salesman import greedy_tsp, christofides
-from minefield_util import gen_flag_field, try_gen_minefield
+from minefield_util import gen_flag_field_rates, try_gen_minefield
 
 ROWS = COLS = 30
 D_RANGE = list(np.linspace(0.01, 0.9, 20))
-P_RANGE = [0.9 * 0.98 ** k for k in range(20)]
+FPR_RANGE = list(np.geomspace(0.01, 0.40, 20))
 R = 0.95
 
-LOW_D, HIGH_D = D_RANGE[0], D_RANGE[19]     # 0.01, 0.9
-HIGH_P, LOW_P = P_RANGE[0], P_RANGE[19]     # 0.90, ~0.6133
+LOW_D, HIGH_D = D_RANGE[0], D_RANGE[19]         # 0.01, 0.9
+LOW_FPR, HIGH_FPR = FPR_RANGE[0], FPR_RANGE[19] # 0.01, 0.40
 
 CORNERS = [
-    ("Low density, low precision",   LOW_D,  LOW_P),
-    ("Low density, high precision",  LOW_D,  HIGH_P),
-    ("High density, low precision",  HIGH_D, LOW_P),
-    ("High density, high precision", HIGH_D, HIGH_P),
+    ("Low density, high FPR",  LOW_D,  HIGH_FPR),
+    ("Low density, low FPR",   LOW_D,  LOW_FPR),
+    ("High density, high FPR", HIGH_D, HIGH_FPR),
+    ("High density, low FPR",  HIGH_D, LOW_FPR),
 ]
 
 
@@ -64,11 +65,9 @@ def tour_cost(D, path):
     return float(sum(D[path[k], path[k + 1]] for k in range(len(path) - 1)))
 
 
-def gen_F(density, P):
+def gen_F(density, fpr):
     M = try_gen_minefield(r=ROWS, c=COLS, d=density)
-    nm = len(M.nonzero()[0])
-    TP = R * nm; FP = TP * (1.0 / P - 1.0); FN = TP * (1.0 / R - 1.0)
-    return gen_flag_field(M, TP, FP, FN)
+    return gen_flag_field_rates(M, R, fpr)
 
 
 def main():
@@ -87,11 +86,11 @@ def main():
     }
     results = {}
     t_all = time.time()
-    for name, d, p in CORNERS:
+    for name, d, fpr in CORNERS:
         acc = {s: {"cost": [], "time": 0.0} for s in solvers}
         n_nodes = []
         for _ in range(N):
-            F = gen_F(d, p)
+            F = gen_F(d, fpr)
             G, D = build_graph(F)
             n = G.number_of_nodes()
             n_nodes.append(n)
@@ -110,7 +109,7 @@ def main():
                 acc[s]["time"] += dt
                 acc[s]["cost"].append(cost)
         results[name] = {
-            "density": d, "precision": p, "mean_nodes": float(np.mean(n_nodes)),
+            "density": d, "fpr": fpr, "mean_nodes": float(np.mean(n_nodes)),
             **{s: {"mean_cost": float(np.mean(acc[s]["cost"])),
                    "total_time_s": acc[s]["time"]} for s in solvers},
         }

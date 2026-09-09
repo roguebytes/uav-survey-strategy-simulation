@@ -4,7 +4,10 @@
 The grid cell side is 1 unit (the verification-altitude camera footprint).
 A lawnmower sweep of an N x N grid with a swath of ``sw`` cells costs
 
-    C_lawnmower(sw) = ceil(N/sw) * (N - 1) + (ceil(N/sw) - 1) * sw
+    C_lawnmower(sw) = ceil(N/sw) * (N - sw) + (ceil(N/sw) - 1) * sw
+
+Each pass spans the centres of its first and last camera footprints (N - sw),
+not the centres of the first and last cells (N - 1),
 
 which gives the Strategy-1 sweep C1 = 899 units at swath 1 (N = 30) and the
 Strategy-2 survey legs at wider swaths. The break-even survey-to-verification
@@ -41,7 +44,7 @@ BLUE, VERM, GREEN, ORANGE, PINK = (
 def lawnmower(sw):
     """Lawnmower sweep cost of the N x N grid at swath width sw (cells)."""
     passes = int(np.ceil(N / sw))
-    return passes * (N - 1) + (passes - 1) * sw
+    return passes * (N - sw) + (passes - 1) * sw
 
 
 def main():
