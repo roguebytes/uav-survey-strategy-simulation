@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+type: software
+title: "UAV Survey Strategy Simulation"
+authors:
+  - family-names: Loewenich
+    given-names: Frank
+repository-code: "https://github.com/roguebytes/uav-survey-strategy-simulation"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Fly High or Fly Low? Selecting Time-Efficient UAV Search Strategies for High-Recall Aerial Detection"
+  authors:
+    - family-names: Loewenich
+      given-names: Frank
+    - family-names: Maire
+      given-names: Frederic
+    - family-names: Sandino
+      given-names: Juan
+    - family-names: Gonzalez
+      given-names: Felipe
+  journal: "Remote Sensing"
+  year: 2026
+  volume: 18
+  issue: 18
+  start: 3129
+  doi: "10.3390/rs18183129"

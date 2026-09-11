@@ -1,8 +1,12 @@
 # UAV Survey Strategy Simulation
 
-Simulation code for the manuscript **"Fly High or Fly Low? Selecting
+Simulation code for the paper **"Fly High or Fly Low? Selecting
 Time-Efficient UAV Search Strategies for High-Recall Aerial Detection"** (Loewenich, Maire, Sandino,
-Gonzalez; submitted to *Remote Sensing*, 2026, manuscript under review).
+Gonzalez), published open access in *Remote Sensing* **2026**, *18*(18), 3129 —
+[doi:10.3390/rs18183129](https://doi.org/10.3390/rs18183129).
+
+Companion dataset (field imagery, annotations, detector predictions):
+[roguebytes/uav-survey-strategy-dataset](https://github.com/roguebytes/uav-survey-strategy-dataset).
 
 The code estimates the expected cost of a two-stage UAV search strategy (a
 rapid high-altitude survey followed by a low-altitude verification flight over
@@ -77,11 +81,24 @@ reported values exactly.
 
 ## Citation
 
-Citation details will be added on publication. Until then, please cite the
-manuscript: Loewenich, F.; Maire, F.; Sandino, J.; Gonzalez, F. *Fly High or
-Fly Low? Selecting Time-Efficient UAV Search Strategies for High-Recall Aerial
-Detection.*
-Submitted to Remote Sensing, 2026.
+If you use this code, please cite the paper:
+
+Loewenich, F.; Maire, F.; Sandino, J.; Gonzalez, F. Fly High or Fly Low?
+Selecting Time-Efficient UAV Search Strategies for High-Recall Aerial Detection.
+*Remote Sens.* **2026**, *18*, 3129. https://doi.org/10.3390/rs18183129
+
+```bibtex
+@article{loewenich2026flyhigh,
+  author  = {Loewenich, Frank and Maire, Frederic and Sandino, Juan and Gonzalez, Felipe},
+  title   = {Fly High or Fly Low? Selecting Time-Efficient {UAV} Search Strategies for High-Recall Aerial Detection},
+  journal = {Remote Sensing},
+  year    = {2026},
+  volume  = {18},
+  number  = {18},
+  pages   = {3129},
+  doi     = {10.3390/rs18183129}
+}
+```
 
 ## License
 
