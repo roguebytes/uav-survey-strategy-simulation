@@ -79,6 +79,11 @@ comparison (both reported in the Discussion):
 All scripts are deterministic under the seeds shown and reproduce the
 reported values exactly.
 
+## See also
+
+- [roguebytes/uav-detect-and-track](https://github.com/roguebytes/uav-detect-and-track): a ROS 2 and Gazebo simulation that flies the survey-then-verify profile end to end, from takeoff to landing, with a YOLOv9-C detector and scores the result against the world's ground truth.
+- [roguebytes/uav-survey-strategy-dataset](https://github.com/roguebytes/uav-survey-strategy-dataset): the field imagery, annotations, detector weights and predictions.
+
 ## Citation
 
 If you use this code, please cite the paper:
