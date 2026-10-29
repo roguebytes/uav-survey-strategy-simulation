@@ -1,0 +1,98 @@
+{
+ "_meta": {
+  "R": 0.95,
+  "C1": 899,
+  "grid": [
+   30,
+   30
+  ],
+  "experiments": 200,
+  "seed": 0,
+  "networkx": "3.3",
+  "total_time_s": 747.9769151210785
+ },
+ "Sparse, 40 m": {
+  "density": 0.06,
+  "fpr": 0.004,
+  "c_survey": 266,
+  "mean_nodes": 54.735,
+  "greedy": {
+   "c_verify": 222.4160671390656,
+   "c2": 488.4160671390656,
+   "saving": 0.4567118274315177,
+   "r_star": 1.328733888489754
+  },
+  "christofides": {
+   "c_verify": 199.05313111677555,
+   "c2": 465.05313111677555,
+   "saving": 0.4826995204485255,
+   "r_star": 1.2843832010197687
+  },
+  "greedy_over_christofides": 1.1173703517810232,
+  "saving_points_christofides_minus_greedy": 2.598769301700785,
+  "time_s": 2.163951873779297
+ },
+ "Sparse, 15 m": {
+  "density": 0.06,
+  "fpr": 0.089,
+  "c_survey": 659,
+  "mean_nodes": 127.06,
+  "greedy": {
+   "c_verify": 336.5480765656318,
+   "c2": 995.5480765656318,
+   "saving": -0.1073949683711144,
+   "r_star": 1.5983588330726068
+  },
+  "christofides": {
+   "c_verify": 299.76641769729775,
+   "c2": 958.7664176972978,
+   "saving": -0.06648099855094314,
+   "r_star": 1.5002496965296435
+  },
+  "greedy_over_christofides": 1.122701065552566,
+  "saving_points_christofides_minus_greedy": 4.091396982017134,
+  "time_s": 12.253432989120483
+ },
+ "Near break-even, 40 m": {
+  "density": 0.43,
+  "fpr": 0.004,
+  "c_survey": 266,
+  "mean_nodes": 370.41,
+  "greedy": {
+   "c_verify": 592.5657272630675,
+   "c2": 858.5657272630675,
+   "saving": 0.04497694409002506,
+   "r_star": 2.9337449495140935
+  },
+  "christofides": {
+   "c_verify": 525.7136563283071,
+   "c2": 791.7136563283071,
+   "saving": 0.11933964813314002,
+   "r_star": 2.4083388402514796
+  },
+  "greedy_over_christofides": 1.1271644176064763,
+  "saving_points_christofides_minus_greedy": 7.436270404311499,
+  "time_s": 173.27926325798035
+ },
+ "Dense, 40 m": {
+  "density": 0.81,
+  "fpr": 0.004,
+  "c_survey": 266,
+  "mean_nodes": 693.505,
+  "greedy": {
+   "c_verify": 835.9723596943289,
+   "c2": 1101.972359694329,
+   "saving": -0.225775706000366,
+   "r_star": 14.263583336454221
+  },
+  "christofides": {
+   "c_verify": 804.8798472089508,
+   "c2": 1070.8798472089507,
+   "saving": -0.19119004138926665,
+   "r_star": 9.551620703334578
+  },
+  "greedy_over_christofides": 1.0386300049543995,
+  "saving_points_christofides_minus_greedy": 3.4585664611099185,
+  "time_s": 560.2758820056915
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "_meta": {
+  "R": 0.95,
+  "grid": [
+   30,
+   30
+  ],
+  "environments": 200
+ },
+ "spacing 4, fpr 0.004": {
+  "density": 0.0625,
+  "fpr": 0.004,
+  "lattice_mean": 258.29061797947213,
+  "bernoulli_mean": 226.14040810546226,
+  "ratio": 1.142169239647858
+ },
+ "spacing 4, fpr 0.089": {
+  "density": 0.0625,
+  "fpr": 0.089,
+  "lattice_mean": 349.3136582141706,
+  "bernoulli_mean": 337.45232517744387,
+  "ratio": 1.035149655675034
+ },
+ "spacing 3, fpr 0.004": {
+  "density": 0.1111111111111111,
+  "fpr": 0.004,
+  "lattice_mean": 333.82110996685196,
+  "bernoulli_mean": 292.8540822802999,
+  "ratio": 1.1398888735562895
+ },
+ "spacing 3, fpr 0.089": {
+  "density": 0.1111111111111111,
+  "fpr": 0.089,
+  "lattice_mean": 409.2027083266442,
+  "bernoulli_mean": 383.52669077904915,
+  "ratio": 1.0669471464826605
+ },
+ "spacing 2, fpr 0.004": {
+  "density": 0.25,
+  "fpr": 0.004,
+  "lattice_mean": 481.3055768008089,
+  "bernoulli_mean": 442.65685794508914,
+  "ratio": 1.0873107874915475
+ },
+ "spacing 2, fpr 0.089": {
+  "density": 0.25,
+  "fpr": 0.089,
+  "lattice_mean": 528.3673734382903,
+  "bernoulli_mean": 499.35805021691027,
+  "ratio": 1.058093232318532
+ }
+}

@@ -48,6 +48,31 @@ Retained from the original submission, for provenance:
 | `docs/` | Experiment log spreadsheets |
 | `archive/` | Earlier exploratory scripts |
 
+## Added for the thesis
+
+The MPhil thesis that extends the paper (Loewenich, Queensland University of
+Technology, 2026) adds the analyses below. Section and table numbers refer to
+the thesis. Each script runs without arguments under the seed and environment
+count stated in its header and writes its results file beside it. Scripts with
+command-line options list them under `--help`.
+
+| File | Purpose |
+|---|---|
+| `time_cost_model.py` | Time-based mission cost with airspeed, turn and dwell effects at the four operating points (Section 5.5.3, Table 5.4) |
+| `time_cost_model.json` | Results as reported |
+| `time_cost_crossover.py` | Target density at which the time-based comparison breaks even (Section 5.5.3) |
+| `time_cost_crossover.json` | Results as reported |
+| `placement_regular_check.py` | Regular lattice placement versus independent placement (Section 5.6.2) |
+| `placement_regular_check.json` | Results as reported |
+| `correlated_flags_analysis.py` | Block-correlated false positives versus independent per-cell flags (Section 5.6.2) |
+| `correlated_flags_analysis.json` | Results as reported |
+| `solver_bias_operating_points.py` | Greedy versus Christofides routing at the four operating points (Section 5.6.6) |
+| `solver_bias_operating_points.json` | Results as reported |
+| `solver_bias_crossover.py` | Crossover density under greedy and Christofides routing at the 40 m operating point (Section 5.6.6) |
+| `solver_bias_crossover.json` | Results as reported |
+| `optimal_tour_bracket.py` | Bracket of the optimal tour between a 2-opt local search and the Held-Karp lower bound (Section 5.6.6) |
+| `optimal_tour_bracket.json` | Results as reported |
+
 ## Requirements
 
 Python 3.10+, `numpy`, `networkx`, `matplotlib`.

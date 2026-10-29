@@ -1,0 +1,72 @@
+{
+ "_meta": {
+  "R": 0.95,
+  "C1": 899,
+  "grid": [
+   30,
+   30
+  ],
+  "fpr": 0.004,
+  "c_survey": 266,
+  "densities": [
+   0.48,
+   0.52,
+   0.56,
+   0.6,
+   0.64
+  ],
+  "experiments": 100,
+  "seed": 0,
+  "networkx": "3.3",
+  "total_time_s": 798.6038229465485
+ },
+ "rows": [
+  {
+   "density": 0.48,
+   "mean_nodes": 410.2,
+   "greedy": 628.0107274830175,
+   "christofides": 558.7663411398644,
+   "saving_greedy": 0.005549802577288654,
+   "saving_christofides": 0.08257359161305411,
+   "time_s": 108.64558696746826
+  },
+  {
+   "density": 0.52,
+   "mean_nodes": 445.02,
+   "greedy": 659.7300571313197,
+   "christofides": 588.1844937911098,
+   "saving_greedy": -0.0297331002573078,
+   "saving_christofides": 0.04985039622790899,
+   "time_s": 126.8097472190857
+  },
+  {
+   "density": 0.56,
+   "mean_nodes": 479.23,
+   "greedy": 683.8219163969818,
+   "christofides": 616.3250940547329,
+   "saving_greedy": -0.05653160889541908,
+   "saving_christofides": 0.018548282475269295,
+   "time_s": 153.80592894554138
+  },
+  {
+   "density": 0.6,
+   "mean_nodes": 512.55,
+   "greedy": 707.1898885753408,
+   "christofides": 644.772888246296,
+   "saving_greedy": -0.08252490386578515,
+   "saving_christofides": -0.01309553753759296,
+   "time_s": 187.6018922328949
+  },
+  {
+   "density": 0.64,
+   "mean_nodes": 546.92,
+   "greedy": 734.961254768903,
+   "christofides": 675.4309861078015,
+   "saving_greedy": -0.11341630118899104,
+   "saving_christofides": -0.04719798232235983,
+   "time_s": 221.7297351360321
+  }
+ ],
+ "crossover_greedy": 0.4862917754849205,
+ "crossover_christofides": 0.5834463253396461
+}
